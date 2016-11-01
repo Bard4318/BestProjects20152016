@@ -1,0 +1,37 @@
+Feedback Group 3
+
+1. Your ability to program with Matlab
+
+    - you have coded the game from scratch, quite an impressive work to be honest.
+	- you have learned how to use GUIs, and very well I must say. You developed new skills in MATLAB programming well beyond my most optimistic expectations. Great job. 
+	- The game works perfectly fine, no bugs. It is extremely similar to the TV version. Music and help (in various forms) make it really enjoyable. Email works too. This game, from my experimentation with it, is spotless. Standing ovation. 
+	
+
+2. How well you present your results
+
+    - instructions on how to run the code is very clear.
+	- you explained very well what the code does, how it works, and the process for designing it and developing it, including mentions of the problems.  	
+    - it is in fact, as you put it in the report, an excellent piece of work. 
+
+
+3. How creative you have been in realizing your project
+
+    - This is definitely one of the most creative projects.
+
+
+
+Final mark for the project: 100
+
+Individual marks: 
+
+	Zoe Lawton- 6306448				100
+	Luke Scarrett- 6306137				100
+	Dimitri Constantinou- 6313666			100
+	George Bowen - 6299593				100
+	Richard Banbrook - 6301507			100
+
+
+
+
+
+

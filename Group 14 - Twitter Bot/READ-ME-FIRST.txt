@@ -1,0 +1,139 @@
+%% TWITTER BOT - GROUP 14 - Economic Analysis with Matrices %%
+
+!!! The mark should be distributed equally for this group !!!
+
+%% Short summary of features:
+% 
+%  • automated following of users
+%  • automated retweeting of users' tweets
+%  • automated posting of tweets from a list of preset messages
+%  • indefinite use of the bot - repeats itself every 24 hours
+%  • the bot doesn't give away the account's nature (more below)
+
+%% Detailed summary of the bot:
+% 
+%  - The bot retweets tweets posted by other users related to a preset
+%    list of stock prices. For this task we have concentrated our interest
+%    around tweets with the '$' symbol, followed by various stocks' NYSE
+%    code. Using the twitty toolbox is not simple for this bot as it
+%    has to run indefinitely and has to fetch data and make sure it
+%    complies with what twitty can accept (i.e. tweet IDs in string
+%    format).
+% 
+%  - The bot tries to ensure that its nature is not easily given away.
+%    To achieve this we have made sure that there is a handful of messages
+%    for each list of tweets that has to be posted each day. Another
+%    example for this is that our account retweets other people's tweets at
+%    random times using a random number generator. Again, doing that we had
+%    to make sure that it does not affect the 24 hour loop, which made us
+%    introduce the totalwait variable (used by the follow bot as well).
+%
+%  - One of the aims of the twitter bot was to follow users through our 
+%    Twitter account based on certain demographics. The filtering of the
+%    users was achieved by searching for tweets of users from the UK and 
+%    the US, containing specific keywords some of which include: 
+%    finance, stocks, currency, forex, business. 
+%
+%  - Moreover, we choose to follow the Twitter accounts that have a minimum
+%    number of followers, specified by the user. Furthermore, the user has 
+%    the option to use the Json parser or Jsonlab. Finally, another
+%    important filtering feature is the option to specify the maximum 
+%    number of people to follow. Once that number is reached the script 
+%    will stop.
+%
+%  - To make the code easily readable and understandable to someone who has
+%    not been involved in its writing, we have included comments throughout
+%    the script and used correct indentation for conditional loops such as,
+%    while...end. Furthermore, there is a user guide below that allows 
+%    any user to make specific changes in order to access his/her own
+%    Twitter account and to be able to run the code.
+   
+%%
+% ** *USER GUIDE:* **
+%    In order for the code to run, specific files are needed. Files include
+%    twitty_1.1.1,parse_json, jsonlab-1.1 and processTweets (links to 
+%    these files can be found below). Furthermore, it is essential
+%    to provide your own personal credentials including consumer key,
+%    consumer secret, access token and access token secret. A way to do
+%    this is to create a mat file and save your credentials in it so you
+%    can load it in your code like we did below in the 'set some
+%    parameters' section. 
+
+%    In order to obtain your own personal credentials
+%    there is a detailed procedure in the twitter documentation:
+%    https://dev.twitter.com/docs/auth/tokens-devtwittercom. 
+%    The steps you have to follow are first of all to  
+%    go to the dev.twitter.com "My applications" page either through
+%    dev.twitter.com/apps or by selecting "My applications" in the options
+%    in the page of your profile in Twitter. Then, you have to create an
+%    application by clicking "Create new application". This will provide
+%    you with the Consumer keys needed. Then click "Create my access token"
+%    to get the two Access tokens. 
+
+%    Now to save your credentials and create a mat file you have to create 
+%    a variable with your own credentials 
+%    (ex :creds = struct('ConsumerKey','your-consumer-key-here',...
+%    'ConsumerSecret','your-consumer-secret-here',...
+%    'AccessToken','your-token-here',...
+%    'AccessTokenSecret','your-token-secret-here');
+%    and then save it.(ex: save creds.mat). This will create a mat file
+%    that you can load in your code in order to use your own credentials.
+
+%    Also, it is vital to change the username in line 137 (check the matlab file)
+%    with your own account's username for the bot to work. 
+%    The bot is also focusing on users/tweets that come from the US and the UK. 
+%    Change as necessary.
+
+%    Upon running the code you will be asked on the command window a few
+%    questions so that the bot will accommodate closer to what you are
+%    looking for. 
+
+%    Q:Does this script run indefinitely, even if I turn off my computer?
+
+%    A: The answer is simply no. If you turn off your computer then your
+%    Matlab script will terminate and the bot will not work until you run
+%    it again. You might want to consider getting a VPS (Virtual Private
+%    Server) where you can run your bot 24/7 if that is what you are
+%    looking to do.
+
+%  - Some of the problems encountered during the writing/compilation of the
+%    code were: getting our data to comply with twitty's requirements,
+%    making sure that the bot can run smoothly for an indefinite period of
+%    time (even forevermore), compiling everyone's code into a single
+%    script, which meant changing dummy variables that were used in two
+%    different standalone codes simultaneously, ensuring that time
+%    intervals did not affect the daily repetition of the bot, targeting
+%    users from specific geolocations, who are interested in specific
+%    things and are quite active within the Twitter community (i.e. high
+%    amount of followers). Additionally, there were also design
+%    issues, as almost every member's script involved an intentional
+%    infinite looping, which was a problem when contemplating all the
+%    scripts into a single script. Last but not least, there was an issue
+%    with checking that the bot runs perfectly with the time intervals, but
+%    we overcame the problem of waiting for 24 hours with tricking Matlab
+%    using CheatEngine. WIN!
+
+%    Motivation for creating this bot: With more and more social networks
+%    dominating the Internet, there has been an unprecedented amount of
+%    social networking "tools" for businesses that helps them promote
+%    products. Websites like Twitter and apps like Instagram are
+%    undoubtedly the main targets of such tools and we wanted to create our
+%    own bot that focuses on Twitter and explores how a business or even
+%    just a person can interact with 300m MAU (monthly active users)
+%    without having a person do all the work manually. This means that jobs
+%    are lost and substituted by computers that do all the work a human would
+%    originally do.
+
+%  - In order to create this code we have used tools created by other
+%  people. Those tools include:
+%  ** Twitty(http://uk.mathworks.com/matlabcentral/fileexchange/34837-twitty)
+%     by Vladimir Bondarenko.
+%  ** JSON Parser(http://uk.mathworks.com/matlabcentral/fileexchange/20565-json-parser)
+%     by Joel Feenstra.
+%  ** JSON LAB(http://www.mathworks.com/matlabcentral/fileexchange/33381-jsonlab--a-toolbox-to-encode-decode-json-files-in-matlab-octave)
+%     by Qianqian Fang.
+%  ** ProcessTweets(https://github.com/toshiakit/AnalyzeTwitter) by Toshiaki Takeuchi.
+%
+%  Also, Loren Shure's user guide on analyzing Twitter with MATLAB proved
+%  to be really helpful.
+%  http://blogs.mathworks.com/loren/2014/06/04/analyzing-twitter-with-matlab/

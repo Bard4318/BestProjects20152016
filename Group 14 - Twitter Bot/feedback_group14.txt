@@ -1,0 +1,32 @@
+Feedback Group 14
+
+1. Your ability to program with Matlab
+
+    - This project creates a Twitter bot that automatically follows other users, retweets other users' tweets, post tweets from a list of preset messages, runs indefinitely, and does not give away the account's nature. 
+	- This is an impressive piece of work, that uses external libraries, and involves an understanding of the Twitter API, a great mastering of MATLAB coding, and definitely more than I could possibly expect from students that never heard of MATLAB a few months before.  
+	- This is high-level code, which must be used by an expert. If you want to distribute it, you may want to add a few user-friendly features to it, like an interface that lets the user select keywords, etc. 
+	- The code is well commented and easy to read. Great job. 
+	
+
+2. How well you present your results
+
+    - instructions on how to USE the code are very precise, with details on how to setup your credentials on the Twitter developers' website, what libraries are used, etc. Just a little thing: you should have stated WHICH file must be run. Nevermind. I guess the name FINALCODE.m gave away which one I had to run...
+	- The report is clear. You explain the difficulties encountered during the development. 
+
+3. How creative you have been in realizing your project
+
+    - It's a creative idea, and a great implementation. 
+
+
+Final mark for the project: 100
+
+Individual marks: 
+
+VASILIA POLYCARPOU			100
+VASILEIOS VASILOPOULOS		100
+MARILENA KAKOURI			100
+EVA SARPETSA				100
+
+
+
+

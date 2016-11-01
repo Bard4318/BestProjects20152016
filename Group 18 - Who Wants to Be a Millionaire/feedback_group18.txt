@@ -1,0 +1,35 @@
+Feedback Group 18
+
+1. Your ability to program with Matlab
+
+    - This project creates a version of Who Wants to Be a Millionnaire
+	- The code is very good, it works perfectly fine, and it turns out you put a lot of effort in every aspect of it, grom the graphical interface to the questions' choice. Great job. 
+	- You have learned how to use GUIs, and other various techniques not explained in the module. Kudos. 
+	- The code has a simple structure, it is probably not the most efficient design you could have come up with, but it does to job perfectly and without having to bother too much about details. The structure of GUIs for each question is identical, which implies that they are both easy to code and easy to read. 
+	- I did enjoy your nice solution for the various lifelines, in particular the way in which they become unavailable after use. 
+	- The code is well commented, and easy to read. 
+	- I would confess this project goes beyond my most optimistic expectations. It's a great piece of work. 
+	
+
+2. How well you present your results
+
+    - instructions on how to use the code are very precise in the report. 
+	- The report is clear, and offers a very detailed description of how the game works, and the process behind its development. 
+	
+3. How creative you have been in realizing your project
+
+    - It's a creative idea, and a good implementation of it. 
+
+
+Final mark for the project: 100
+
+Individual marks: 
+
+Bradley Caton-Garrett (6309998)				100
+Jean Monique Delos Santos (6312397)			100
+Anjna Hirani (6253788)						100
+Jordan Poulter (6308473)					100
+Hareena Matoo (6308099)						100
+
+
+
